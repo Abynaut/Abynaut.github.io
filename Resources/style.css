@@ -1,0 +1,193 @@
+*{
+    /* The next three lines remove auto-formatting present in default html pages*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.bg-library{
+    padding: 0px;
+    height: 600px;
+    grid-area: bg-library;
+    text-align: center;
+}
+
+.bg-library-text{
+    width: 80%;
+    position: relative;
+    top: -55%;
+    left: 50%;
+    color: orange;
+    text-shadow: 2px 4px black;
+    transform: translate(-50%, -50%);
+    font-size: 125px;
+    font-family: 'Cinzel', serif;
+    /*z-index controls how high a component should be placed over another. Higher number = front, lower = back*/
+    z-index: 1;
+}
+
+.bgLT-top{
+    text-shadow: 2px 1px black;
+    font-size: 30px;
+}
+.box3{
+    padding: 30px;
+    background: rgb(32, 32, 32);
+    height: 600px;
+    grid-area: box3;
+}
+
+.footer {
+    display: flex;
+    padding: 10px;
+    min-height: 8vh;
+    background-color: #5D4954;
+    color: rgb(218, 218, 218);
+    grid-area: footer;
+    font-family: 'Cinzel', serif;
+    align-items: center;
+  }
+.social-media{
+    text-align: center;
+    width: 50%;
+}
+  .web-credit{
+      text-align: center;
+      width: 50%;
+  }
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1 fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "N N"
+    "bg-library box3"
+    "footer footer";
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    align-items: center;
+    background-color: #5D4954;
+    grid-area: N;
+    font-family: 'Cinzel', serif;
+    z-index: 10;
+}
+
+.navigation{
+    color: rgb(218, 218, 218);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 22px;
+    text-shadow: -1px 2px black;
+    z-index: 10;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+.nav-links{
+    display:flex;
+    justify-content: space-around;
+    width: 30%;
+    font-size: 15px;
+    z-index: 10;
+}
+
+.nav-links a{
+    color: rgb(218, 218, 218);
+        /*text decoration removes the underlines of links*/
+    text-decoration: none;
+    text-shadow: -1px 2px black;
+    z-index: 10;
+}
+
+.nav-links li{
+    list-style: none;
+    z-index: 10;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(218, 218, 218);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        display:flex;
+        justify-content: space-around;
+        width: 30%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5D4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;    
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%)
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
