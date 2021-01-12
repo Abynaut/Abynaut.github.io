@@ -1,0 +1,147 @@
+<!--
+	Tags for reference:
+
+	FORMATTING:
+	<b></b> = bold
+	<i></i> = italics
+	<u></u> = underline
+	<em></em> = emphasize/italicize
+	<strong></strong> = bold
+	<br> = line break
+	<hr> = Horizontal rule (it's a line)
+
+	LINKS AND IMAGES:
+	<a href="(url)" target=(target attribute)></a> = links (aka anchor. text in between anchor will become hypertext)
+		-These have "target" attributes, which dictate whether to open the link in the current tag, or to open a new one. 
+		
+		These include:
+		"_blank" — opens a new tab
+		"_self" — opens on current tab
+		There are others, but am too dum to know what mean. Google when necessary.
+
+	<img src="(url of hosted image)" border="(x pixels)"> = image insert
+		-These can be saved locally. 
+		-src stands for "source"
+		-Border is optional
+
+	LISTS AND TABLES:
+	<ol>
+		<li> (text1) </li>
+		<li> (text2) </li>
+		(...)
+	</ol>
+	ol = ordered list (uses numbers)
+	ul = unordered list (uses bullets)
+	li = list element. Repeat as necessary
+		Lists can be nested!
+
+	<table border="(x pixels)" cellpadding="(x pixels)" cellspacing="(x pixels)">
+		<tr>
+			<th> (header text 1) </th>
+			<th> (header text 2) </th>
+			<th> (header text 3) </th>
+			(...)
+		</tr>
+
+		<tr>
+			<td>(header 1 data)</td>
+			<td>(header 2 data)</td>
+			<td>(header 3 data)</td>
+			(...)
+		</tr>
+	</table>
+
+	table = c'mon, man.
+	tr = ???
+	th = table header
+	td = table data (cell entries)
+	table border = border on outside of table
+	cellpadding = space between text and cell boundary
+	cellspacing = space between individual cells
+		None of these three are necessary, but help with sexiness
+
+	NOTE: 
+	-IDs and classes are used by CSS to target specific html elements and apply stylistic changes. IDs can't be used more than once. Classes can.
+	-HTML and CSS are both programmed in one file. What the fuck?
+	-Try not to blend CSS and HTML elements
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Nicholas P. Fuhrmann | Professional Editing Services
+	</title>
+	<meta name="description"
+		content="Affordable and professional editing services and writing advice for authors of every background. Experienced in developmental, structural, line, and copy editing, and in being an absolute nerd." />
+	<meta name="robots" content="index, follow" />
+	<link rel="icon" href="C:\Users\Nicholas\Downloads\pen_pencil_icon_177003.ico" />
+	<link rel="stylesheet" href="Resources/style.css" media="screen" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<nav id="nav-box">
+		<div class="navigation">
+			<h1>NPF Editorial Services</h1>
+		</div>
+			<ul class="nav-links">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Who Are You?</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div> 
+			</div>
+	</nav>
+
+	<div class="bg-library">
+		<div class="img1">
+			<img 
+			width="1920"
+			src="D:\FREELANCE\Website\Code\Images\Library-min.jpg"
+			/>
+		</div>
+		<div class="bg-library-text">
+			<div class="bgLT-top">
+				<p>Welcome to <br></p>
+			</div>
+			<div class="bgLT-bot">
+				<p>NPF Editorial Services</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="box3">
+	</div>
+
+	<div class="footer">
+		<div class="social-media">
+			<p>Find me on LinkedIn:</p>
+		</div>
+
+		<div class="web-credit">
+			<p><i>Website coded and designed by Nicholas Fuhrmann</i></p>
+		</div>
+	  </div>
+	
+<script src="app.js"></script>
+</body>
+
+</html>
